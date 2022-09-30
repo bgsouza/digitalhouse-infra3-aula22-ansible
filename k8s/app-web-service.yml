@@ -3,7 +3,6 @@ kind: Service
 metadata:
   name: svc-lb-app-web-node-dh
 spec:
-  type: LoadBalancer
   selector:
     app: app-web-node-dh
   ports:
