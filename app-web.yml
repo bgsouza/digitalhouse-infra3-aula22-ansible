@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: app-web-node-dh
+  name: app-web-node-dh
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-web-node-dh
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: app-web-node-dh
+    spec:
+      containers:
+      - image: bgsouza/dh-node-app:1.0
+        name: ex01-app01
+        ports:
+          - containerPort: 3000
+status: {}
